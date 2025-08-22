@@ -1,104 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>AI Dev Quest</title>
-  <link rel="icon" href="favicon.ico" />
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      margin-bottom: 10px;
-    }
-    #xp-container {
-      background: #444;
-      border-radius: 10px;
-      overflow: hidden;
-      margin: 10px auto;
-      width: 80%;
-      height: 25px;
-      position: relative;
-    }
-    #xp-bar {
-      background: #00ff99;
-      height: 100%;
-      width: 0%;
-      transition: width 0.5s ease;
-    }
-    #xp-label {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      font-weight: bold;
-    }
-    .quest-list {
-      margin: 20px auto;
-      text-align: left;
-      max-width: 400px;
-    }
-    .quest-list label {
-      display: block;
-      margin: 10px 0;
-      padding: 10px;
-      background: #333;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .completed {
-      background: #006600;
-      text-decoration: line-through;
-    }
-    #badge {
-      font-size: 1.5em;
-      margin: 20px 0;
-    }
-    #music-toggle {
-      background: #222;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-bottom: 20px;
-    }
-    #quote-box {
-      font-style: italic;
-      margin-top: 20px;
-      padding: 15px;
-      background: #1a1a1a;
-      border-radius: 10px;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🧠 AI Dev Quest</h1>
-  <div id="xp-container">
-    <div id="xp-bar"></div>
-    <span id="xp-label">0 XP</span>
-  </div>
+  <h1>AI Dev Quest</h1>
+  <div id="xp-bar">XP: <span id="xp-label">0 XP</span></div>
 
-  <div class="quest-list">
-    <label><input type="checkbox" class="quest" /> Complete onboarding</label>
-    <label><input type="checkbox" class="quest" /> Finish first quest</label>
-    <label><input type="checkbox" class="quest" /> Explore GitHub Pages</label>
-    <label><input type="checkbox" class="quest" /> Share your dashboard</label>
-  </div>
+  <ul>
+    <li><input type="checkbox" class="quest" data-xp="25"> Complete onboarding</li>
+    <li><input type="checkbox" class="quest" data-xp="50"> Finish first quest</li>
+    <li><input type="checkbox" class="quest" data-xp="30"> Explore GitHub Pages</li>
+    <li><input type="checkbox" class="quest" data-xp="20"> Share your dashboard</li>
+  </ul>
 
   <div id="badge">🔒 Badge Locked</div>
-
   <button id="music-toggle">🔇 Music Off</button>
+  <audio id="bg-music" src="music.mp3" loop></audio>
 
-  <div id="quote-box">Loading motivation...</div>
+  <div id="quote-box">“Every expert was once a beginner.”</div>
 
   <script src="main.dart.js"></script>
 </body>
