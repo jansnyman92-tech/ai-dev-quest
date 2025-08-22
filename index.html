@@ -1,182 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Andre's Learning Quest</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #f9f9f9;
-      padding: 2em;
-      max-width: 800px;
-      margin: auto;
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-    .course-module {
-      background: #ffffff;
-      padding: 1em;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin-bottom: 2em;
-    }
-    h2 {
-      color: #0077cc;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    li {
-      margin-bottom: 1em;
-    }
-    button {
-      margin-top: 5px;
-      padding: 6px 12px;
-      background-color: #0077cc;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    button.done {
-      background-color: #888;
-      cursor: default;
-    }
-    progress {
-      width: 100%;
-      height: 20px;
-      margin-bottom: 1em;
-    }
-    .xp-display {
-      font-weight: bold;
-      margin-top: 1em;
-    }
-    #badge-week3 {
-      background: #ffeaa7;
-      padding: 1em;
-      border-radius: 6px;
-      font-weight: bold;
-      display: none;
-      margin-top: 1em;
-    }
-  </style>
-</head>
-<body>
+<!-- 🌟 Andre's Quest Engine Dashboard -->
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 600px; margin: auto; padding: 20px; background: #fefefe; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
 
-  <h1>🎓 Andre's Learning Quest</h1>
+  <h2 style="text-align:center;">🎮 Andre's Quest Dashboard</h2>
+  <p style="text-align:center; font-style: italic;">Level up your skills, earn XP, and vibe to your soundtrack.</p>
 
-  <!-- Week 1 -->
-  <section class="course-module">
-    <h2>📘 Week 1: HTML & CSS Foundations</h2>
-    <progress id="week1-progress" value="0" max="4"></progress>
-    <ul>
-      <li>
-        <strong>✅ Learn HTML Basics</strong><br>
-        <a href="https://www.youtube.com/watch?v=UB1O30fR-EE">HTML Crash Course for Beginners</a><br>
-        <button onclick="completeTask(this, 'week1-progress', 'xp-display-week1')">Mark as Complete</button>
-      </li>
-      <li>
-        <strong>✅ Learn CSS Basics</strong><br>
-        <a href="https://www.youtube.com/watch?v=yfoY53QXEnI">CSS Crash Course for Beginners</a><br>
-        <button onclick="completeTask(this, 'week1-progress', 'xp-display-week1')">Mark as Complete</button>
-      </li>
-      <li>
-        <strong>✅ Build Your First Web Page</strong><br>
-        <a href="https://www.youtube.com/watch?v=3JluqTojuME">Build a Simple Website with HTML & CSS</a><br>
-        <button onclick="completeTask(this, 'week1-progress', 'xp-display-week1')">Mark as Complete</button>
-      </li>
-      <li>
-        <strong>✅ Style Your Page with CSS</strong><br>
-        <a href="https://www.youtube.com/watch?v=1Rs2ND1ryYc">Responsive Web Design Tutorial</a><br>
-        <button onclick="completeTask(this, 'week1-progress', 'xp-display-week1')">Mark as Complete</button>
-      </li>
-    </ul>
-    <p class="xp-display" id="xp-display-week1">XP: 0</p>
-  </section>
+  <!-- 🎧 Music Embed -->
+  <div style="margin: 20px 0;">
+    <h3>🎵 Quest Soundtrack</h3>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5Zz4YQZKZKZJvV3z9Yxg4U" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <p style="font-size: 0.9em;">Featuring: Florence + the Machine, Skunk Anansie, Garbage, Lord Huron</p>
+  </div>
 
-  <!-- Week 2 -->
-  <section class="course-module">
-    <h2>🧩 Week 2: JavaScript & GitHub Pages Mastery</h2>
-    <progress id="week2-progress" value="0" max="4"></progress>
-    <ul>
-      <li>
-        <strong>✅ Learn JavaScript Fundamentals</strong><br>
-        <a href="https://www.youtube.com/watch?v=EerdGm-ehJQ">JavaScript Tutorial Full Course</a><br>
-        <button onclick="completeTask(this, 'week2-progress', 'xp-display-week2')">Mark as Complete</button>
-      </li>
-      <li>
-        <strong>✅ Practice DOM Manipulation</strong><br>
-        <a href="https://www.youtube.com/watch?v=lfmg-EJ8gm4">JavaScript DOM Projects</a><br>
-        <button onclick="completeTask(this, 'week2-progress', 'xp-display-week2')">Mark as Complete</button>
-      </li>
-      <li>
-        <strong>✅ Deploy Your Site with GitHub Pages</strong><br>
-        <a href="https://www.youtube.com/watch?v=QyFcl_Fba-k">GitHub Pages Walkthrough</a><br>
-        <button onclick="completeTask(this, 'week2-progress', 'xp-display-week2')">Mark as Complete</button>
-      </li>
-      <li>
-        <strong>✅ Customize Your GitHub Pages Site</strong><br>
-        <a href="https://www.youtube.com/watch?v=e5AwNU3Y2es">Advanced GitHub Pages Setup</a><br>
-        <button onclick="completeTask(this, 'week2-progress', 'xp-display-week2')">Mark as Complete</button>
-      </li>
-    </ul>
-    <p class="xp-display" id="xp-display-week2">XP: 0</p>
-  </section>
+  <!-- 📊 Progress Tracker -->
+  <div style="margin: 20px 0;">
+    <h3>📊 XP Progress</h3>
+    <div style="background: #eee; border-radius: 8px; overflow: hidden;">
+      <div style="width: 42%; background: linear-gradient(to right, #ff6a00, #ee0979); padding: 6px 0; text-align: center; color: white; font-weight: bold;">
+        42% Complete
+      </div>
+    </div>
+    <p style="font-size: 0.9em;">Keep going! You're evolving like a true Heartsmith.</p>
+  </div>
 
-  <!-- Week 3 -->
-  <section class="course-module">
-    <h2>🧠 Week 3: Dart & Flutter Integration</h2>
-    <progress id="week3-progress" value="0" max="4"></progress>
-    <ul>
-      <li>
-        <strong>✅ Learn Dart Programming</strong><br>
-        <a href="https://www.youtube.com/watch?v=CzRQ9mnmh44">Dart & Flutter Developer Course</a><br>
-        <button onclick="completeTask(this, 'week3-progress', 'xp-display-week3')">Mark as Complete</button>
-      </li>
-      <li>
-        <strong>✅ Master Flutter Basics</strong><br>
-        <a href="https://www.youtube.com/watch?v=3kaGC_DrUnw">Flutter Tutorial for Beginners</a><br>
-        <button onclick="completeTask(this, 'week3-progress', 'xp-display-week3')">Mark as Complete</button>
-      </li>
-      <li>
-        <strong>✅ Build Your First Flutter App</strong><br>
-        <a href="https://www.youtube.com/watch?v=HQ_ytw58tC4">Flutter Beginner Course</a><br>
-        <button onclick="completeTask(this, 'week3-progress', 'xp-display-week3')">Mark as Complete</button>
-      </li>
-      <li>
-        <strong>✅ Explore Advanced Flutter Projects</strong><br>
-        <a href="https://www.youtube.com/watch?v=VPvVD8t02U8">Flutter Cross Platform App Course</a><br>
-        <button onclick="completeTask(this, 'week3-progress', 'xp-display-week3')">Mark as Complete</button>
-      </li>
-    </ul>
-    <p class="xp-display" id="xp-display-week3">XP: 0</p>
-    <div id="badge-week3">🏅 Badge Unlocked: Dart & Flutter Explorer!</div>
-    <audio id="motivation-audio" src="https://example.com/motivation.mp3" preload="auto"></audio>
-  </section>
+  <!-- 🔥 Daily Streak -->
+  <div style="margin: 20px 0;">
+    <h3>🔥 Daily Streak</h3>
+    <p>You've completed <strong>3 days in a row</strong> — +15 bonus XP!</p>
+  </div>
 
-  <script>
-    let xpWeek1 = 0, xpWeek2 = 0, xpWeek3 = 0;
+  <!-- 🗺️ Quest Modules -->
+  <h3>🗺️ Your Learning Quests</h3>
+  <ul style="list-style: none; padding: 0;">
+    <li style="margin-bottom: 15px;">
+      <strong>🏞️ Starter Town</strong><br>
+      <em>Platform Setup + Mobile Workflows</em><br>
+      XP: +50 | Badge: First Steps<br>
+      🎶 *Dog Days Are Over* – Florence<br>
+      💬 “You leveled up — the dog days are officially over.”
+    </li>
+    <li style="margin-bottom: 15px;">
+      <strong>🕸️ Code Caverns</strong><br>
+      <em>HTML/CSS (Responsive Design)</em><br>
+      XP: +100 | Badge: Web Weaver<br>
+      🎶 *Weak* – Skunk Anansie<br>
+      💬 “Even when you feel weak, you’re evolving.”
+    </li>
+    <li style="margin-bottom: 15px;">
+      <strong>⛰️ Script Summit</strong><br>
+      <em>JavaScript Interactivity</em><br>
+      XP: +150 | Badge: Code Mage<br>
+      🎶 *Shake It Out* – Florence<br>
+      💬 “Your code is fierce — like a Skunk Anansie solo.”
+    </li>
+    <li style="margin-bottom: 15px;">
+      <strong>🌳 Git Grove</strong><br>
+      <em>GitHub & Version Control</em><br>
+      XP: +200 | Badge: Archivist<br>
+      🎶 *Charlie Big Potato* – Skunk Anansie<br>
+      💬 “You’re now a digital archivist — versioned and victorious.”
+    </li>
+    <li style="margin-bottom: 15px;">
+      <strong>🏜️ Deploy Desert</strong><br>
+      <em>Web App Deployment</em><br>
+      XP: +250 | Badge: Trailblazer<br>
+      🎶 *Little Talks* – Of Monsters and Men<br>
+      💬 “Your app is live — celebrate this win!”
+    </li>
+    <li style="margin-bottom: 15px;">
+      <strong>🌲 UX Forest</strong><br>
+      <em>Gamified UX + Progress Bars</em><br>
+      XP: +300 | Badge: Quest Designer<br>
+      🎶 *Only Happy When It Rains* – Garbage<br>
+      💬 “You’ve designed a quest engine — now others can level up too.”
+    </li>
+    <li style="margin-bottom: 15px;">
+      <strong>🏛️ EQ Temple</strong><br>
+      <em>Emotional Intelligence in UX</em><br>
+      XP: +350 | Badge: Heartsmith<br>
+      🎶 *Hedonism* – Skunk Anansie<br>
+      💬 “You’ve unlocked ‘Heartsmith’ — empathy meets interface.”
+    </li>
+  </ul>
 
-    function completeTask(button, progressId, xpDisplayId) {
-      if (!button.classList.contains("done")) {
-        button.classList.add("done");
-        button.textContent = "✓ Completed";
-
-        const progress = document.getElementById(progressId);
-        progress.value += 1;
-
-        if (progressId === "week1-progress") {
-          xpWeek1 += 25;
-          document.getElementById(xpDisplayId).textContent = "XP: " + xpWeek1;
-        } else if (progressId === "week2-progress") {
-          xpWeek2 += 25;
-          document.getElementById(xpDisplayId).textContent = "XP: " + xpWeek2;
-        } else if (progressId === "week3-progress") {
-          xpWeek3 += 25;
-          document.getElementById(xpDisplayId).textContent = "XP: " + xpWeek3;
-
-          if (xpWeek3 >= 100) {
-            document.getElementById("badge-week3").style.display
+</div>
