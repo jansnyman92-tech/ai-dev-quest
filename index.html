@@ -2,26 +2,181 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AI Dev Quest</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Andre's Learning Quest</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .course-module {
+      background: #ffffff;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 2em;
+    }
+    h2 {
+      color: #0077cc;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 1em;
+    }
+    button {
+      margin-top: 5px;
+      padding: 6px 12px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button.done {
+      background-color: #888;
+      cursor: default;
+    }
+    progress {
+      width: 100%;
+      height: 20px;
+      margin-bottom: 1em;
+    }
+    .xp-display {
+      font-weight: bold;
+      margin-top: 1em;
+    }
+    #badge-week3 {
+      background: #ffeaa7;
+      padding: 1em;
+      border-radius: 6px;
+      font-weight: bold;
+      display: none;
+      margin-top: 1em;
+    }
+  </style>
 </head>
 <body>
-  <h1>AI Dev Quest</h1>
-  <div id="xp-bar">XP: <span id="xp-label">0 XP</span></div>
 
-  <ul>
-    <li><input type="checkbox" class="quest" data-xp="25"> Complete onboarding</li>
-    <li><input type="checkbox" class="quest" data-xp="50"> Finish first quest</li>
-    <li><input type="checkbox" class="quest" data-xp="30"> Explore GitHub Pages</li>
-    <li><input type="checkbox" class="quest" data-xp="20"> Share your dashboard</li>
-  </ul>
+  <h1>🎓 Andre's Learning Quest</h1>
 
-  <div id="badge">🔒 Badge Locked</div>
-  <button id="music-toggle">🔇 Music Off</button>
-  <audio id="bg-music" src="music.mp3" loop></audio>
+  <!-- Week 1 -->
+  <section class="course-module">
+    <h2>📘 Week 1: HTML & CSS Foundations</h2>
+    <progress id="week1-progress" value="0" max="4"></progress>
+    <ul>
+      <li>
+        <strong>✅ Learn HTML Basics</strong><br>
+        <a href="https://www.youtube.com/watch?v=UB1O30fR-EE">HTML Crash Course for Beginners</a><br>
+        <button onclick="completeTask(this, 'week1-progress', 'xp-display-week1')">Mark as Complete</button>
+      </li>
+      <li>
+        <strong>✅ Learn CSS Basics</strong><br>
+        <a href="https://www.youtube.com/watch?v=yfoY53QXEnI">CSS Crash Course for Beginners</a><br>
+        <button onclick="completeTask(this, 'week1-progress', 'xp-display-week1')">Mark as Complete</button>
+      </li>
+      <li>
+        <strong>✅ Build Your First Web Page</strong><br>
+        <a href="https://www.youtube.com/watch?v=3JluqTojuME">Build a Simple Website with HTML & CSS</a><br>
+        <button onclick="completeTask(this, 'week1-progress', 'xp-display-week1')">Mark as Complete</button>
+      </li>
+      <li>
+        <strong>✅ Style Your Page with CSS</strong><br>
+        <a href="https://www.youtube.com/watch?v=1Rs2ND1ryYc">Responsive Web Design Tutorial</a><br>
+        <button onclick="completeTask(this, 'week1-progress', 'xp-display-week1')">Mark as Complete</button>
+      </li>
+    </ul>
+    <p class="xp-display" id="xp-display-week1">XP: 0</p>
+  </section>
 
-  <div id="quote-box">“Every expert was once a beginner.”</div>
+  <!-- Week 2 -->
+  <section class="course-module">
+    <h2>🧩 Week 2: JavaScript & GitHub Pages Mastery</h2>
+    <progress id="week2-progress" value="0" max="4"></progress>
+    <ul>
+      <li>
+        <strong>✅ Learn JavaScript Fundamentals</strong><br>
+        <a href="https://www.youtube.com/watch?v=EerdGm-ehJQ">JavaScript Tutorial Full Course</a><br>
+        <button onclick="completeTask(this, 'week2-progress', 'xp-display-week2')">Mark as Complete</button>
+      </li>
+      <li>
+        <strong>✅ Practice DOM Manipulation</strong><br>
+        <a href="https://www.youtube.com/watch?v=lfmg-EJ8gm4">JavaScript DOM Projects</a><br>
+        <button onclick="completeTask(this, 'week2-progress', 'xp-display-week2')">Mark as Complete</button>
+      </li>
+      <li>
+        <strong>✅ Deploy Your Site with GitHub Pages</strong><br>
+        <a href="https://www.youtube.com/watch?v=QyFcl_Fba-k">GitHub Pages Walkthrough</a><br>
+        <button onclick="completeTask(this, 'week2-progress', 'xp-display-week2')">Mark as Complete</button>
+      </li>
+      <li>
+        <strong>✅ Customize Your GitHub Pages Site</strong><br>
+        <a href="https://www.youtube.com/watch?v=e5AwNU3Y2es">Advanced GitHub Pages Setup</a><br>
+        <button onclick="completeTask(this, 'week2-progress', 'xp-display-week2')">Mark as Complete</button>
+      </li>
+    </ul>
+    <p class="xp-display" id="xp-display-week2">XP: 0</p>
+  </section>
 
-  <script src="main.dart.js"></script>
-</body>
-</html>
+  <!-- Week 3 -->
+  <section class="course-module">
+    <h2>🧠 Week 3: Dart & Flutter Integration</h2>
+    <progress id="week3-progress" value="0" max="4"></progress>
+    <ul>
+      <li>
+        <strong>✅ Learn Dart Programming</strong><br>
+        <a href="https://www.youtube.com/watch?v=CzRQ9mnmh44">Dart & Flutter Developer Course</a><br>
+        <button onclick="completeTask(this, 'week3-progress', 'xp-display-week3')">Mark as Complete</button>
+      </li>
+      <li>
+        <strong>✅ Master Flutter Basics</strong><br>
+        <a href="https://www.youtube.com/watch?v=3kaGC_DrUnw">Flutter Tutorial for Beginners</a><br>
+        <button onclick="completeTask(this, 'week3-progress', 'xp-display-week3')">Mark as Complete</button>
+      </li>
+      <li>
+        <strong>✅ Build Your First Flutter App</strong><br>
+        <a href="https://www.youtube.com/watch?v=HQ_ytw58tC4">Flutter Beginner Course</a><br>
+        <button onclick="completeTask(this, 'week3-progress', 'xp-display-week3')">Mark as Complete</button>
+      </li>
+      <li>
+        <strong>✅ Explore Advanced Flutter Projects</strong><br>
+        <a href="https://www.youtube.com/watch?v=VPvVD8t02U8">Flutter Cross Platform App Course</a><br>
+        <button onclick="completeTask(this, 'week3-progress', 'xp-display-week3')">Mark as Complete</button>
+      </li>
+    </ul>
+    <p class="xp-display" id="xp-display-week3">XP: 0</p>
+    <div id="badge-week3">🏅 Badge Unlocked: Dart & Flutter Explorer!</div>
+    <audio id="motivation-audio" src="https://example.com/motivation.mp3" preload="auto"></audio>
+  </section>
+
+  <script>
+    let xpWeek1 = 0, xpWeek2 = 0, xpWeek3 = 0;
+
+    function completeTask(button, progressId, xpDisplayId) {
+      if (!button.classList.contains("done")) {
+        button.classList.add("done");
+        button.textContent = "✓ Completed";
+
+        const progress = document.getElementById(progressId);
+        progress.value += 1;
+
+        if (progressId === "week1-progress") {
+          xpWeek1 += 25;
+          document.getElementById(xpDisplayId).textContent = "XP: " + xpWeek1;
+        } else if (progressId === "week2-progress") {
+          xpWeek2 += 25;
+          document.getElementById(xpDisplayId).textContent = "XP: " + xpWeek2;
+        } else if (progressId === "week3-progress") {
+          xpWeek3 += 25;
+          document.getElementById(xpDisplayId).textContent = "XP: " + xpWeek3;
+
+          if (xpWeek3 >= 100) {
+            document.getElementById("badge-week3").style.display
