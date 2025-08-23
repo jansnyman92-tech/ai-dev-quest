@@ -1,85 +1,63 @@
-<!-- 🌟 Andre's Quest Engine Dashboard -->
-<div style="font-family: 'Segoe UI', sans-serif; max-width: 600px; margin: auto; padding: 20px; background: #fefefe; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 600px; margin: auto; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
 
   <h2 style="text-align:center;">🎮 Andre's Quest Dashboard</h2>
   <p style="text-align:center; font-style: italic;">Level up your skills, earn XP, and vibe to your soundtrack.</p>
 
   <!-- 🎧 Music Embed -->
-  <div style="margin: 20px 0;">
-    <h3>🎵 Quest Soundtrack</h3>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5Zz4YQZKZKZJvV3z9Yxg4U" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    <p style="font-size: 0.9em;">Featuring: Florence + the Machine, Skunk Anansie, Garbage, Lord Huron</p>
-  </div>
+  <iframe style="border-radius:12px; margin-bottom: 20px;" src="https://open.spotify.com/embed/playlist/5Zz4YQZKZKZJvV3z9Yxg4U" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-  <!-- 📊 Progress Tracker -->
-  <div style="margin: 20px 0;">
-    <h3>📊 XP Progress</h3>
-    <div style="background: #eee; border-radius: 8px; overflow: hidden;">
-      <div style="width: 42%; background: linear-gradient(to right, #ff6a00, #ee0979); padding: 6px 0; text-align: center; color: white; font-weight: bold;">
-        42% Complete
-      </div>
-    </div>
-    <p style="font-size: 0.9em;">Keep going! You're evolving like a true Heartsmith.</p>
-  </div>
+  <!-- 📊 XP Display -->
+  <p id="xp-display"><strong>Total XP:</strong> 0</p>
 
-  <!-- 🔥 Daily Streak -->
-  <div style="margin: 20px 0;">
-    <h3>🔥 Daily Streak</h3>
-    <p>You've completed <strong>3 days in a row</strong> — +15 bonus XP!</p>
-  </div>
+  <!-- 🏅 Badges -->
+  <div id="badge-1" style="display:none;">🎖️ Badge Unlocked: First Steps</div>
+  <div id="badge-2" style="display:none;">🧙‍♂️ Badge Unlocked: Code Mage</div>
+  <div id="badge-3" style="display:none;">💜 Badge Unlocked: Heartsmith</div>
 
-  <!-- 🗺️ Quest Modules -->
-  <h3>🗺️ Your Learning Quests</h3>
-  <ul style="list-style: none; padding: 0;">
-    <li style="margin-bottom: 15px;">
-      <strong>🏞️ Starter Town</strong><br>
-      <em>Platform Setup + Mobile Workflows</em><br>
-      XP: +50 | Badge: First Steps<br>
-      🎶 *Dog Days Are Over* – Florence<br>
-      💬 “You leveled up — the dog days are officially over.”
-    </li>
-    <li style="margin-bottom: 15px;">
-      <strong>🕸️ Code Caverns</strong><br>
-      <em>HTML/CSS (Responsive Design)</em><br>
-      XP: +100 | Badge: Web Weaver<br>
-      🎶 *Weak* – Skunk Anansie<br>
-      💬 “Even when you feel weak, you’re evolving.”
-    </li>
-    <li style="margin-bottom: 15px;">
-      <strong>⛰️ Script Summit</strong><br>
-      <em>JavaScript Interactivity</em><br>
-      XP: +150 | Badge: Code Mage<br>
-      🎶 *Shake It Out* – Florence<br>
-      💬 “Your code is fierce — like a Skunk Anansie solo.”
-    </li>
-    <li style="margin-bottom: 15px;">
-      <strong>🌳 Git Grove</strong><br>
-      <em>GitHub & Version Control</em><br>
-      XP: +200 | Badge: Archivist<br>
-      🎶 *Charlie Big Potato* – Skunk Anansie<br>
-      💬 “You’re now a digital archivist — versioned and victorious.”
-    </li>
-    <li style="margin-bottom: 15px;">
-      <strong>🏜️ Deploy Desert</strong><br>
-      <em>Web App Deployment</em><br>
-      XP: +250 | Badge: Trailblazer<br>
-      🎶 *Little Talks* – Of Monsters and Men<br>
-      💬 “Your app is live — celebrate this win!”
-    </li>
-    <li style="margin-bottom: 15px;">
-      <strong>🌲 UX Forest</strong><br>
-      <em>Gamified UX + Progress Bars</em><br>
-      XP: +300 | Badge: Quest Designer<br>
-      🎶 *Only Happy When It Rains* – Garbage<br>
-      💬 “You’ve designed a quest engine — now others can level up too.”
-    </li>
-    <li style="margin-bottom: 15px;">
-      <strong>🏛️ EQ Temple</strong><br>
-      <em>Emotional Intelligence in UX</em><br>
-      XP: +350 | Badge: Heartsmith<br>
-      🎶 *Hedonism* – Skunk Anansie<br>
-      💬 “You’ve unlocked ‘Heartsmith’ — empathy meets interface.”
-    </li>
-  </ul>
+  <!-- 🗺️ Weekly Quests -->
+  <details>
+    <summary><strong>Week 1: The Setup Begins</strong> – 🛠️ +250 XP</summary>
+    <p>Goal: Prepare the dev environment</p>
+    <p>Playlist: Florence – “Shake It Out”</p>
+    <p>Prompt: “Every hero starts with a toolkit. What’s in yours?”</p>
+    <button onclick="completeQuest(250, 'xp-display')">Mark as Complete</button>
+  </details>
+
+  <details>
+    <summary><strong>Week 2: Graph Explorer</strong> – 🌐 +300 XP</summary>
+    <p>Goal: Learn Microsoft Graph and OAuth</p>
+    <p>Playlist: Skunk Anansie – “Weak”</p>
+    <p>Prompt: “What connections are you building—technically and personally?”</p>
+    <button onclick="completeQuest(300, 'xp-display')">Mark as Complete</button>
+  </details>
+
+  <details>
+    <summary><strong>Week 3: Document Intelligence</strong> – 📄 +450 XP</summary>
+    <p>Goal: Build Document Analyzer prototype</p>
+    <p>Playlist: Florence – “Cosmic Love”</p>
+    <p>Prompt: “What stories do documents tell when AI listens?”</p>
+    <button onclick="completeQuest(450, 'xp-display')">Mark as Complete</button>
+  </details>
+
+  <!-- Add Weeks 4–12 using same format -->
 
 </div>
+
+<script>
+let xpTotal = 0;
+
+function completeQuest(xpAmount, displayId) {
+  xpTotal += xpAmount;
+  document.getElementById(displayId).textContent = "Total XP: " + xpTotal;
+
+  if (xpTotal >= 1000) {
+    document.getElementById("badge-1").style.display = "block";
+  }
+  if (xpTotal >= 3000) {
+    document.getElementById("badge-2").style.display = "block";
+  }
+  if (xpTotal >= 5000) {
+    document.getElementById("badge-3").style.display = "block";
+  }
+}
+</script>
